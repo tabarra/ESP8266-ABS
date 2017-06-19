@@ -36,14 +36,9 @@ byte packet[128] = {
 
 
 void fillMACs() {
-  for (int j = 0; j < apCount; j++) {
-    apMACs[j][0] = random(256);
-    apMACs[j][1] = random(256);
-    apMACs[j][2] = random(256);
-    apMACs[j][3] = random(256);
-    apMACs[j][4] = random(256);
-    apMACs[j][5] = random(256);
-  }
+  for (int j = 0; j < apCount; j++)
+    for (int k = 0; k < 6; k++)
+      apMACs[j][k] = random(256);
 }
 
 
